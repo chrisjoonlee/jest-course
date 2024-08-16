@@ -18,6 +18,7 @@ test('the data is peanut butter', async () => {
 // .resolves
 test('the data is peanut butter', async () => {
     await expect(fetchData()).resolves.toBe('peanut butter');
+    // Can use return instead fo await
 });
 
 export { }

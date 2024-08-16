@@ -16,6 +16,13 @@ test('the fetch fails with an error', async () => {
 // .rejects
 test('the fetch fails with an error', async () => {
     await expect(failToFetchData()).rejects.toMatch('error');
+    // Can use return instead fo await
+});
+
+// .catch
+test('the fetch fails with an error', () => {
+    expect.assertions(1);
+    return failToFetchData().catch(error => expect(error).toMatch('error'));
 });
 
 export { }
